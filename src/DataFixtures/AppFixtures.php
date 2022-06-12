@@ -18,8 +18,7 @@ class AppFixtures extends Fixture
     // ...
     public function load(ObjectManager $manager) :void
     {
-
-        dd('asd');
+ 
         $user = new User();
 
         

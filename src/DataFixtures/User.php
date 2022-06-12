@@ -26,10 +26,10 @@ class User extends Fixture
 
         
         $user->setName('admin');
-        $user->setEmail('programozok@akh.hu');
-        $user->setRoles(['USER_ROLE']);
+        $user->setEmail('admin@admin.hu');
+        $user->setRoles(['ROLE_ADMIN','ROLE_USER']);
 
-        $password = $this->hasher->hashPassword($user, 'pass_1234');
+        $password = $this->hasher->hashPassword($user, 'admin');
         $user->setPassword($password);
         
         $manager->persist($user);       
