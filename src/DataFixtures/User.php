@@ -29,8 +29,8 @@ class User extends Fixture
         $user->setEmail('programozok@akh.hu');
         $user->setRoles(['USER_ROLE']);
 
-        //$password = $this->hasher->hashPassword($user, 'pass_1234');
-        $user->setPassword('$password');
+        $password = $this->hasher->hashPassword($user, 'pass_1234');
+        $user->setPassword($password);
         
         $manager->persist($user);       
         $manager->flush(); 
